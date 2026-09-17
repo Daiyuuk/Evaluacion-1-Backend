@@ -1,25 +1,18 @@
-"""
-URL configuration for mi_proyecto project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+
+# Importar vistas de ambas aplicaciones
+import app1.views as views_app1
+import app2.views as views_app2
 
 urlpatterns = [
-    path('', include('app1.urls')),  # Ruta por defecto
     path('admin/', admin.site.urls),
-    path('app2/', include('app2.urls')),
+    
+    # Rutas para App 1
+    path('vista1/', views_app1.vista1_app1, name='vista1_app1'),
+    path('vista2/', views_app1.vista2_app1, name='vista2_app1'),
+    
+    # Rutas para App 2
+    path('vista1_app2/', views_app2.vista1_app2, name='vista1_app2'),
+    path('vista2_app2/', views_app2.vista2_app2, name='vista2_app2'),
 ]

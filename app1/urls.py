@@ -6,4 +6,6 @@ app_name = 'app1'
 urlpatterns = [
     path('vista1/', views.vista1_app1, name='vista1_app1'),
     path('vista2/', views.vista2_app1, name='vista2_app1'),
+    path('vista1_app2/', views.vista1_app2, name='vista1_app2'),
+    path('vista2_app2/', views.vista2_app2, name='vista2_app2'),
 ]

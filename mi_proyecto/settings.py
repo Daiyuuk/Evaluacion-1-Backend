@@ -58,18 +58,18 @@ import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Directorio global de templates
-        'APP_DIRS': True,  # Habilita la búsqueda de templates dentro de las apps
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                # Context processors por defecto
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                'django.template.context_processors.static',  # Para archivos estáticos
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
-
 WSGI_APPLICATION = 'mi_proyecto.wsgi.application'
 
 
