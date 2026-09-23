@@ -5,6 +5,8 @@ from django.urls import path
 import app1.views as views_app1
 import app2.views as views_app2
 
+import perfil.views as views_perfil
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     
@@ -15,4 +17,9 @@ urlpatterns = [
     # Rutas para App 2
     path('vista1_app2/', views_app2.vista1_app2, name='vista1_app2'),
     path('vista2_app2/', views_app2.vista2_app2, name='vista2_app2'),
+
+    # Ruta para la vista de perfil
+    path('perfil/', views_perfil.perfil_uno, name='perfil_uno'),
+    path('perfil2/', views_perfil.perfil_dos, name='perfil_dos')
+
 ]

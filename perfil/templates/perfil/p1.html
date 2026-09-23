@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Inicio - App 1{% endblock %}
+
+{% block content %}
+    <h1> Perfil de Usuario  1</h1>
+    <ul>
+        <li>Nombre: {{ nombre }}</li>
+        <li>Año de nacimiento: {{ año }}</li>
+        <li>Correo electrónico: {{ correo }}</li>
+    </ul>
+
+    <img src="{% static 'images/foto1.png'%}" alt="Calamardo" width="200">
+{% endblock %}

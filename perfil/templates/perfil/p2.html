@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Inicio - App 1{% endblock %}
+
+{% block content %}
+    <h1> Perfil de Usuario  2</h1>
+    <ul>
+        <li>Nombre: {{ nombre }}</li>
+        <li>Año de nacimiento: {{ año }}</li>
+        <li>Correo electrónico: {{ correo }}</li>
+    </ul>
+
+    <img src="{% static 'images/' %}{{ foto }}" alt="luigi" width="200">
+<button type="button" class="btn btn-outline-dark">Dark</button>
+    <a class="btn btn-outline-dark" href="{%url 'perfil:p1'%}">Perfil 1</a>
+{% endblock %}

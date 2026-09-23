@@ -2,9 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>{% block title %}Mi Proyecto{% endblock %}</title>
 </head>
 <body>
+        <ul>
+            <li><a href="{% url 'vista1_app1' %}">Vista 1 App 1</a></li>
+            <li><a href="{% url 'vista2_app1' %}">Vista 2 App 1</a></li>
+            <li><a href="{% url 'vista1_app2' %}">Vista 1 App 2</a></li>
+            <li><a href="{% url 'vista2_app2' %}">Vista 2 App 2</a></li>
+            <li><a href="{% url 'perfil_uno' %}">Perfil 1</a></li>
+            <li><a href="{% url 'perfil_dos' %}">Perfil 2</a></li>
+        </ul>
+
+
+
     <main>
         {% block content %}
         {% endblock %}
